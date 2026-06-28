@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="华人世界第一个鲁米诗歌研修平台，从诗歌、历史、苏菲思想、生命体验，到当代生活实践，完整走进鲁米的世界。"
+    />
+    <title>鲁米诗歌研修平台</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="返回首页">
+        <span class="brand-mark">R</span>
+        <span>鲁米研修</span>
+      </a>
+      <nav>
+        <a href="#poem">今日一诗</a>
+        <a href="#path">学习路径</a>
+        <a href="#world">鲁米世界</a>
+        <a href="#practice">诗歌修习</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-figure"
+          src="assets/whirling-dervish-hero.png"
+          alt="旋转的托钵僧剪影"
+        />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="kicker">华人世界第一个「鲁米诗歌研修平台」</p>
+          <h1 id="hero-title">你寻找的，<br />正在寻找你。</h1>
+          <p class="hero-subtitle">
+            每一首诗，都是一扇回家的门。
+          </p>
+          <div class="hero-actions" aria-label="主要入口">
+            <a class="primary-action" href="#poem">开始今天的一首诗</a>
+            <a href="#path">学习路径</a>
+            <a href="#world">鲁米世界</a>
+          </div>
+          <div class="gate-grid" aria-label="六个入口">
+            <a href="#poem">
+              <strong>今日一诗</strong>
+              <span>一首诗，一次进入</span>
+            </a>
+            <a href="#path">
+              <strong>学习路径</strong>
+              <span>从入门到带领读诗</span>
+            </a>
+            <a href="#world">
+              <strong>鲁米世界</strong>
+              <span>人物、历史、苏菲背景</span>
+            </a>
+            <a href="#themes">
+              <strong>主题研修</strong>
+              <span>爱、寻找、分离、回家</span>
+            </a>
+            <a href="#practice">
+              <strong>诗歌修习</strong>
+              <span>书写、静坐、行动</span>
+            </a>
+            <a href="#library">
+              <strong>书房与地图</strong>
+              <span>文本、译本、路线</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="poem" class="section poem-section" aria-labelledby="poem-title">
+        <div class="section-heading">
+          <p class="kicker">Daily Poem</p>
+          <h2 id="poem-title">今日一诗</h2>
+          <p>不是收藏诗句，而是学习怎样进入诗。</p>
+        </div>
+
+        <div class="poem-layout">
+          <article class="poem-reader" aria-label="今日诗歌阅读器">
+            <div class="reader-top">
+              <div>
+                <p class="eyebrow">Masnavi 选段 · 原型示例</p>
+                <h3>伤口与光</h3>
+              </div>
+              <div class="segmented" role="tablist" aria-label="译本切换">
+                <button class="active" data-version="persian" type="button">波斯文</button>
+                <button data-version="nicholson" type="button">Nicholson</button>
+                <button data-version="arberry" type="button">Arberry</button>
+                <button data-version="barks" type="button">Barks</button>
+                <button data-version="chinese" type="button">中文</button>
+              </div>
+            </div>
+            <div class="poem-text" id="poemText" lang="fa" dir="rtl"></div>
+            <div class="audio-row" aria-label="朗读">
+              <button type="button" data-audio="波斯文朗读">波斯文朗读</button>
+              <button type="button" data-audio="英文朗读">英文朗读</button>
+              <button type="button" data-audio="中文朗读">中文朗读</button>
+              <button type="button" data-audio="背景音乐">背景音乐</button>
+            </div>
+          </article>
+
+          <aside class="guide-panel" aria-label="五分钟导读">
+            <p class="eyebrow">五分钟导读</p>
+            <h3>这里的伤口，是什么？</h3>
+            <p>
+              鲁米式的“伤口”不是自怜，而是自我防御裂开的地方。人平时用身份、控制、解释保护自己，
+              但真正的爱、失去和渴望，会让这些保护失效。
+            </p>
+            <p>
+              光不是从外面安慰你，而是在裂缝中显出：你并不只是你的恐惧，也不只是你的损失。
+            </p>
+            <div class="keyword-list" aria-label="关键词">
+              <a href="#themes">Love</a>
+              <a href="#themes">Longing</a>
+              <a href="#themes">Ego</a>
+              <a href="#themes">Silence</a>
+              <a href="#themes">Beloved</a>
+              <a href="#themes">Heart</a>
+              <a href="#themes">Mirror</a>
+              <a href="#themes">Soul</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="world" class="section world-section" aria-labelledby="world-title">
+        <div class="section-heading">
+          <p class="kicker">Rumi World</p>
+          <h2 id="world-title">鲁米百科</h2>
+          <p>不是人物简介，而是可持续扩展的知识体系。</p>
+        </div>
+        <div class="knowledge-grid">
+          <article>
+            <span>01</span>
+            <h3>鲁米是谁？</h3>
+            <p>一生时间线、家族、老师、学生、弟子、流派与影响。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>沙姆士是谁？</h3>
+            <p>相遇、转变、消失与学术观点，解释鲁米生命中的断裂点。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>梅夫拉维教团</h3>
+            <p>旋转舞、音乐、仪式、服装，以及每个动作的象征意义。</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>苏菲主义</h3>
+            <p>Dhikr、Fana、Baqa、Tawhid、Love、Heart 等核心概念。</p>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>伊斯兰背景</h3>
+            <p>Quran、Hadith、Sharia、Tariqa、Haqiqa、Marifa 的关系。</p>
+          </article>
+          <article>
+            <span>06</span>
+            <h3>误读索引</h3>
+            <p>区分原文、译文、转述和现代再创作，减少浪漫化误读。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="themes" class="section" aria-labelledby="themes-title">
+        <div class="section-heading">
+          <p class="kicker">Thematic Study</p>
+          <h2 id="themes-title">按主题学习</h2>
+          <p>网站的核心不是搜索诗句，而是沿着主题长期阅读。</p>
+        </div>
+        <div class="theme-rail">
+          <button class="active" data-theme="爱" type="button">爱</button>
+          <button data-theme="寻找" type="button">寻找</button>
+          <button data-theme="分离" type="button">分离</button>
+          <button data-theme="回家" type="button">回家</button>
+          <button data-theme="心" type="button">心</button>
+          <button data-theme="火" type="button">火</button>
+          <button data-theme="酒" type="button">酒</button>
+          <button data-theme="花园" type="button">花园</button>
+          <button data-theme="门" type="button">门</button>
+          <button data-theme="镜子" type="button">镜子</button>
+        </div>
+        <div class="theme-detail" id="themeDetail"></div>
+      </section>
+
+      <section class="section layers-section" aria-labelledby="layers-title">
+        <div class="section-heading">
+          <p class="kicker">Deep Reading</p>
+          <h2 id="layers-title">五层解析</h2>
+          <p>每首诗都从文本进入生命经验，而不是停在“好美”。</p>
+        </div>
+        <div class="layers">
+          <article>
+            <span>第一层</span>
+            <h3>字面意思</h3>
+            <p>先弄清楚诗在说什么，避免凭感觉跳读。</p>
+          </article>
+          <article>
+            <span>第二层</span>
+            <h3>文学修辞</h3>
+            <p>观察比喻、重复、转折、召唤和悖论。</p>
+          </article>
+          <article>
+            <span>第三层</span>
+            <h3>苏菲象征</h3>
+            <p>理解酒、火、恋人、朋友、门、镜子等传统语汇。</p>
+          </article>
+          <article>
+            <span>第四层</span>
+            <h3>心理学解释</h3>
+            <p>用荣格视角阅读阴影、破碎、整合与个体化。</p>
+          </article>
+          <article>
+            <span>第五层</span>
+            <h3>现代生活</h3>
+            <p>把诗带回失恋、工作、关系、孤独和日常选择。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="path" class="section academy-section" aria-labelledby="path-title">
+        <div class="section-heading">
+          <p class="kicker">Rumi Academy</p>
+          <h2 id="path-title">鲁米学院</h2>
+          <p>像课程一样循序渐进，像修习一样每天回来。</p>
+        </div>
+        <div class="path-timeline">
+          <article>
+            <span>Level 1</span>
+            <h3>认识鲁米</h3>
+            <p>20 课，建立人物、时代、文本与关键词地图。</p>
+          </article>
+          <article>
+            <span>Level 2</span>
+            <h3>苏菲诗歌</h3>
+            <p>40 课，进入象征体系与读诗方法。</p>
+          </article>
+          <article>
+            <span>Level 3</span>
+            <h3>玛斯纳维精读</h3>
+            <p>100 课，从故事、寓言、神学与修行层面阅读。</p>
+          </article>
+          <article>
+            <span>Level 4</span>
+            <h3>鲁米思想研究</h3>
+            <p>论文、历史、哲学、比较宗教与文本考证。</p>
+          </article>
+          <article>
+            <span>Level 5</span>
+            <h3>带领读诗</h3>
+            <p>组织读诗会、分享会、生命书写与探索小组。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="practice" class="section practice-section" aria-labelledby="practice-title">
+        <div class="section-heading">
+          <p class="kicker">Rumi Path</p>
+          <h2 id="practice-title">诗歌修习</h2>
+          <p>每天一首诗、一个问题、一次书写、一次静坐、一个行动。</p>
+        </div>
+        <div class="practice-layout">
+          <article class="practice-card">
+            <p class="eyebrow">今日问题</p>
+            <h3>你最害怕失去什么？</h3>
+            <textarea
+              id="reflectionInput"
+              rows="7"
+              placeholder="把答案写在这里。七天后，再回来看看它有没有变化。"
+            ></textarea>
+            <div class="practice-actions">
+              <button id="saveReflection" type="button">保存回答</button>
+              <span id="saveStatus" role="status"></span>
+            </div>
+          </article>
+          <article class="practice-card">
+            <p class="eyebrow">365 天路径</p>
+            <div class="daily-steps">
+              <div><span>1</span>读一首诗</div>
+              <div><span>2</span>回答一个问题</div>
+              <div><span>3</span>静坐五分钟</div>
+              <div><span>4</span>完成一个行动</div>
+              <div><span>5</span>七天后回看</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="library" class="section library-section" aria-labelledby="library-title">
+        <div class="section-heading">
+          <p class="kicker">Library & Map</p>
+          <h2 id="library-title">鲁米书房与地图</h2>
+          <p>把文本、地点和时间线连起来，形成可探索的知识图谱。</p>
+        </div>
+        <div class="library-layout">
+          <article class="map-panel">
+            <div class="map-line" aria-hidden="true"></div>
+            <button style="left: 10%; top: 45%" data-place="巴尔赫" type="button">巴尔赫</button>
+            <button style="left: 32%; top: 34%" data-place="尼沙布尔" type="button">尼沙布尔</button>
+            <button style="left: 58%; top: 52%" data-place="大马士革" type="button">大马士革</button>
+            <button style="left: 78%; top: 39%" data-place="科尼亚" type="button">科尼亚</button>
+            <div class="map-caption" id="mapCaption">点击地点查看时间线节点。</div>
+          </article>
+          <article class="shelf">
+            <h3>推荐书架</h3>
+            <ul>
+              <li><strong>Masnavi</strong><span>核心文本，适合深度精读。</span></li>
+              <li><strong>Divan-e Shams</strong><span>进入鲁米燃烧性的抒情诗。</span></li>
+              <li><strong>Fihi Ma Fihi</strong><span>理解鲁米谈话与教学方式。</span></li>
+              <li><strong>研究论文</strong><span>按入门、进阶、学术排序。</span></li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section quote-section" aria-labelledby="quote-title">
+        <div class="section-heading">
+          <p class="kicker">Quote Graph</p>
+          <h2 id="quote-title">鲁米语录知识图谱</h2>
+          <p>每一句语录都回到出处、上下文、误译说明与延伸阅读。</p>
+        </div>
+        <div class="quote-graph">
+          <article>
+            <h3>你寻找的，正在寻找你。</h3>
+            <dl>
+              <div><dt>出处</dt><dd>标注原文、译文或现代转述状态。</dd></div>
+              <div><dt>上下文</dt><dd>说明这句话在鲁米思想中如何指向渴望与回归。</dd></div>
+              <div><dt>误译说明</dt><dd>区分诗意表达、英文改写与可核查文本。</dd></div>
+              <div><dt>延伸</dt><dd>相关文章、音频、视频、诗歌与修习问题。</dd></div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section class="section china-section" aria-labelledby="china-title">
+        <div class="section-heading">
+          <p class="kicker">Chinese Context</p>
+          <h2 id="china-title">华人特色</h2>
+          <p>比较不是简单等同，而是在文本、历史与思想背景中互相照亮。</p>
+        </div>
+        <div class="compare-table" role="table" aria-label="鲁米与中国思想比较">
+          <div role="row">
+            <strong role="columnheader">鲁米</strong>
+            <strong role="columnheader">中国思想</strong>
+            <strong role="columnheader">研修问题</strong>
+          </div>
+          <div role="row">
+            <span>爱即道路</span>
+            <span>仁者爱人</span>
+            <span>爱是情感，还是一种修行能力？</span>
+          </div>
+          <div role="row">
+            <span>回家</span>
+            <span>返本开新</span>
+            <span>所谓家，是过去，还是更真实的自己？</span>
+          </div>
+          <div role="row">
+            <span>空杯</span>
+            <span>虚而待物</span>
+            <span>什么必须被清空，新的理解才会进入？</span>
+          </div>
+          <div role="row">
+            <span>镜子</span>
+            <span>明镜台与禅宗意象</span>
+            <span>心是被擦亮，还是本来明净？</span>
+          </div>
+          <div role="row">
+            <span>无我</span>
+            <span>忘我、无执</span>
+            <span>放下自我，是否等于取消个人？</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>诗 · 影 · 心</p>
+      <span>让经典成为一种生活实践。</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
