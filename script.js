@@ -96,10 +96,140 @@ const places = {
   科尼亚: "科尼亚是鲁米成熟、教学、写作与梅夫拉维传统形成的核心地点。"
 };
 
+const academyLevels = {
+  1: {
+    label: "Level 1",
+    title: "认识鲁米",
+    summary: "为中文读者建立第一张鲁米地图：他是谁、活在什么时代、为什么沙姆士改变了他，以及哪些关键词会反复出现。",
+    meta: [
+      ["课时", "20 课"],
+      ["周期", "4 周"],
+      ["适合", "零基础读者"],
+      ["产出", "个人鲁米阅读地图"]
+    ],
+    modules: [
+      ["鲁米的一生", "巴尔赫、迁徙、科尼亚、教学、沙姆士相遇与晚年写作。"],
+      ["三部核心文本", "Masnavi、Divan-e Shams、Fihi Ma Fihi 的性质、读法与难度。"],
+      ["关键词地图", "爱、渴望、心、酒、火、朋友、镜子、回家、沉默。"],
+      ["中文读者入口", "如何避免把鲁米读成鸡汤、情诗或脱离传统的心灵语录。"]
+    ],
+    lessons: [
+      "第 1 课：为什么鲁米不是“诗人简介”可以讲完的人",
+      "第 5 课：沙姆士出现以前，鲁米是谁",
+      "第 12 课：芦笛为什么哭泣",
+      "第 19 课：建立你的第一份鲁米关键词卡"
+    ],
+    practice: "每天读一段短诗，写下一个“我以为我懂了，但其实还需要查证”的地方。",
+    outcome: "完成一份 1 页鲁米阅读地图，能向新读者说明人物、文本、背景与常见误读。"
+  },
+  2: {
+    label: "Level 2",
+    title: "苏菲诗歌",
+    summary: "进入苏菲诗歌的象征体系，学习如何从字面、隐喻、宗教语境和生命经验四个方向读一首诗。",
+    meta: [
+      ["课时", "40 课"],
+      ["周期", "8 周"],
+      ["适合", "已有基础读者"],
+      ["产出", "主题诗歌读法手册"]
+    ],
+    modules: [
+      ["象征词典", "酒馆、杯、火、夜、门、花园、恋人、朋友等意象的传统含义。"],
+      ["读诗方法", "从一句诗拆出对象、动作、张力、转折和修行指向。"],
+      ["诵读与沉默", "为什么苏菲诗歌需要声音、节奏、停顿和身体参与。"],
+      ["跨文化比较", "与庄子、禅宗、阳明心学比较时，如何相互照亮而不混同。"]
+    ],
+    lessons: [
+      "第 3 课：Wine 为什么通常不是酒",
+      "第 11 课：Beloved 是爱人、神，还是灵魂的方向",
+      "第 24 课：破碎、空杯与虚而待物",
+      "第 38 课：为一个主题建立 10 首诗的学习路径"
+    ],
+    practice: "选择一个象征词，连续七天记录它在诗中、生活中和关系中的不同面貌。",
+    outcome: "完成一份主题读诗手册，包含 10 首诗、关键词解释、导读问题和修习建议。"
+  },
+  3: {
+    label: "Level 3",
+    title: "玛斯纳维精读",
+    summary: "把《玛斯纳维》当作故事、寓言、神学文本和修行手册来读，训练长期精读能力。",
+    meta: [
+      ["课时", "100 课"],
+      ["周期", "24 周"],
+      ["适合", "深度研修者"],
+      ["产出", "精读笔记与导读稿"]
+    ],
+    modules: [
+      ["故事结构", "识别故事中的人物、欲望、错误理解、转化节点和结尾回声。"],
+      ["寓言层次", "区分情节趣味、伦理教训、苏菲象征和灵魂修行层。"],
+      ["文本互证", "把《玛斯纳维》与《迪万》《菲希玛菲希》中的相近思想连接。"],
+      ["当代应用", "把寓言转化为关系、工作、失去、成瘾、恐惧与爱中的提问。"]
+    ],
+    lessons: [
+      "第 1 课：为什么《玛斯纳维》不是普通诗集",
+      "第 16 课：故事里的愚人，常常是我们自己",
+      "第 47 课：寓言如何承载神学而不变成说教",
+      "第 92 课：写一篇 1500 字中文导读"
+    ],
+    practice: "每周精读一个故事：先复述，再拆解象征，最后写出一个现代生活问题。",
+    outcome: "完成 6 篇精读笔记和 1 篇可发布导读稿，具备独立讲解一则《玛斯纳维》故事的能力。"
+  },
+  4: {
+    label: "Level 4",
+    title: "鲁米思想研究",
+    summary: "从学术角度处理鲁米：历史语境、文本来源、译本差异、宗教哲学和比较研究。",
+    meta: [
+      ["形式", "专题研究"],
+      ["周期", "16 周"],
+      ["适合", "研究型学习者"],
+      ["产出", "研究提案或论文"]
+    ],
+    modules: [
+      ["文本与译本", "Nicholson、Arberry、Barks 等译本差异，以及中文转译风险。"],
+      ["历史语境", "十三世纪安纳托利亚、伊斯兰学术网络与梅夫拉维传统形成。"],
+      ["思想问题", "Tawhid、Fana、Baqa、Heart、Love 与知识论、存在论的关系。"],
+      ["比较宗教", "与禅宗、道家、基督宗教神秘主义比较时的方法边界。"]
+    ],
+    lessons: [
+      "专题 1：一句流行语录如何追溯出处",
+      "专题 4：Coleman Barks 的贡献与问题",
+      "专题 9：Fana 是否等于“无我”",
+      "专题 15：写出一个可研究的问题"
+    ],
+    practice: "每周选择一条资料，记录其出处、可靠性、争议点和可用于中文导读的方式。",
+    outcome: "完成一份 3000 字研究提案，包含问题意识、文献路径、文本样本和比较边界。"
+  },
+  5: {
+    label: "Level 5",
+    title: "带领读诗",
+    summary: "把个人阅读转化为公共带领能力，学习如何组织读诗会、生命书写、分享会与长期小组。",
+    meta: [
+      ["形式", "实作训练"],
+      ["周期", "12 周"],
+      ["适合", "带领者"],
+      ["产出", "一场完整读诗会"]
+    ],
+    modules: [
+      ["读诗会设计", "开场、诵读、导读、静默、书写、分享和收束的完整流程。"],
+      ["问题设计", "把诗句转化为不冒犯、不操控、能打开经验的提问。"],
+      ["小组伦理", "边界、保密、创伤敏感、宗教差异与带领者自我觉察。"],
+      ["品牌延展", "连接诗、影、心：读诗会、观影工作坊、播客和社群路径。"]
+    ],
+    lessons: [
+      "第 2 课：一场 90 分钟读诗会的骨架",
+      "第 6 课：如何处理沉默、眼泪和争辩",
+      "第 9 课：从诗句进入生命书写",
+      "第 12 课：完成你的第一场公开带领"
+    ],
+    practice: "设计一次 30 分钟微型读诗，邀请 2 到 4 人参与，并记录现场反馈。",
+    outcome: "完成一套读诗会方案，包含选诗、导读稿、提问卡、静坐引导、书写题和风险边界。"
+  }
+};
+
 const poemText = document.querySelector("#poemText");
 const versionButtons = document.querySelectorAll("[data-version]");
 const themeButtons = document.querySelectorAll("[data-theme]");
+const academyButtons = document.querySelectorAll("[data-academy-level]");
 const themeDetail = document.querySelector("#themeDetail");
+const academyDetail = document.querySelector("#academyDetail");
 const reflectionInput = document.querySelector("#reflectionInput");
 const saveButton = document.querySelector("#saveReflection");
 const saveStatus = document.querySelector("#saveStatus");
@@ -138,12 +268,68 @@ function setTheme(theme) {
   });
 }
 
+function setAcademyLevel(level) {
+  const selected = academyLevels[level];
+  academyDetail.innerHTML = `
+    <div class="academy-detail-header">
+      <div>
+        <p class="eyebrow">${selected.label}</p>
+        <h3>${selected.title}</h3>
+        <p class="academy-summary">${selected.summary}</p>
+      </div>
+      <div class="academy-meta">
+        ${selected.meta.map(([label, value]) => `
+          <div>
+            <span>${label}</span>
+            <strong>${value}</strong>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+    <div class="academy-body">
+      <div>
+        <div class="academy-block">
+          <h4>四个单元</h4>
+          <ul>
+            ${selected.modules.map(([title, description]) => `
+              <li><strong>${title}</strong>${description}</li>
+            `).join("")}
+          </ul>
+        </div>
+        <div class="academy-block">
+          <h4>代表课</h4>
+          <ul>
+            ${selected.lessons.map((lesson) => `<li>${lesson}</li>`).join("")}
+          </ul>
+        </div>
+      </div>
+      <aside class="academy-outcome">
+        <div class="academy-block">
+          <h4>本级修习</h4>
+          <p>${selected.practice}</p>
+        </div>
+        <div class="academy-block">
+          <h4>完成标准</h4>
+          <p>${selected.outcome}</p>
+        </div>
+      </aside>
+    </div>
+  `;
+  academyButtons.forEach((button) => {
+    button.classList.toggle("active", button.dataset.academyLevel === String(level));
+  });
+}
+
 versionButtons.forEach((button) => {
   button.addEventListener("click", () => setPoemVersion(button.dataset.version));
 });
 
 themeButtons.forEach((button) => {
   button.addEventListener("click", () => setTheme(button.dataset.theme));
+});
+
+academyButtons.forEach((button) => {
+  button.addEventListener("click", () => setAcademyLevel(button.dataset.academyLevel));
 });
 
 document.querySelectorAll("[data-audio]").forEach((button) => {
@@ -176,3 +362,4 @@ saveButton.addEventListener("click", () => {
 
 setPoemVersion("chinese");
 setTheme("爱");
+setAcademyLevel("1");

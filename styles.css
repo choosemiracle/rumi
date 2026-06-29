@@ -46,6 +46,10 @@ button {
   cursor: pointer;
 }
 
+button {
+  color: inherit;
+}
+
 .site-header {
   position: fixed;
   top: 0;
@@ -374,8 +378,10 @@ h1 {
 
 .knowledge-grid article,
 .layers article,
-.path-timeline article,
-.theme-detail {
+.path-timeline button,
+.theme-detail,
+.academy-intro > div,
+.academy-detail {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.035);
@@ -388,7 +394,9 @@ h1 {
 
 .knowledge-grid span,
 .layers span,
-.path-timeline span {
+.path-timeline span,
+.academy-intro span,
+.academy-detail .academy-meta span {
   display: inline-flex;
   margin-bottom: 18px;
   color: var(--gold);
@@ -406,6 +414,9 @@ h1 {
 .layers p,
 .path-timeline p,
 .theme-detail p,
+.academy-intro p,
+.academy-detail p,
+.academy-detail li,
 .shelf span,
 .quote-graph dd,
 .compare-table span {
@@ -455,6 +466,35 @@ h1 {
   padding: 22px;
 }
 
+.academy-intro {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.academy-intro > div {
+  min-height: 160px;
+  padding: 22px;
+}
+
+.academy-intro span,
+.academy-detail .academy-meta span {
+  margin-bottom: 10px;
+}
+
+.academy-intro strong {
+  display: block;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.academy-intro p {
+  margin: 12px 0 0;
+}
+
 .path-timeline {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -463,12 +503,114 @@ h1 {
   background: var(--line);
 }
 
-.path-timeline article {
+.path-timeline button {
   min-height: 260px;
   padding: 24px;
   border: 0;
   border-radius: 0;
   background: rgba(20, 18, 16, 0.74);
+  text-align: left;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.path-timeline button:hover,
+.path-timeline button.active {
+  background: rgba(49, 42, 34, 0.92);
+}
+
+.path-timeline button.active {
+  box-shadow: inset 0 4px 0 var(--gold);
+}
+
+.academy-detail {
+  margin-top: 16px;
+  padding: clamp(24px, 4vw, 42px);
+}
+
+.academy-detail-header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.55fr);
+  gap: 28px;
+  align-items: start;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.academy-detail h3 {
+  font-size: clamp(30px, 4.2vw, 52px);
+}
+
+.academy-detail .academy-summary {
+  margin: 16px 0 0;
+  font-size: 18px;
+}
+
+.academy-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.academy-meta div {
+  min-height: 96px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(20, 18, 16, 0.56);
+}
+
+.academy-meta strong {
+  display: block;
+  font-size: 20px;
+}
+
+.academy-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.75fr);
+  gap: 28px;
+  margin-top: 30px;
+}
+
+.academy-block + .academy-block {
+  margin-top: 26px;
+}
+
+.academy-block h4 {
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.academy-block ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.academy-block li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.academy-block li strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink);
+}
+
+.academy-outcome {
+  padding: 22px;
+  border: 1px solid rgba(214, 173, 98, 0.24);
+  border-radius: 8px;
+  background: rgba(214, 173, 98, 0.06);
+}
+
+.academy-outcome p:last-child {
+  margin-bottom: 0;
 }
 
 textarea {
@@ -655,7 +797,8 @@ textarea:focus {
 
 @media (max-width: 1100px) {
   .gate-grid,
-  .knowledge-grid {
+  .knowledge-grid,
+  .academy-intro {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
@@ -667,7 +810,9 @@ textarea:focus {
   .poem-layout,
   .practice-layout,
   .library-layout,
-  .theme-detail {
+  .theme-detail,
+  .academy-detail-header,
+  .academy-body {
     grid-template-columns: 1fr;
   }
 
@@ -702,8 +847,14 @@ textarea:focus {
   .gate-grid,
   .knowledge-grid,
   .layers,
-  .path-timeline {
+  .path-timeline,
+  .academy-intro,
+  .academy-meta {
     grid-template-columns: 1fr;
+  }
+
+  .path-timeline button {
+    min-height: 190px;
   }
 
   .reader-top {

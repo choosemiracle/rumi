@@ -235,33 +235,51 @@
           <h2 id="path-title">鲁米学院</h2>
           <p>像课程一样循序渐进，像修习一样每天回来。</p>
         </div>
+        <div class="academy-intro" aria-label="学院学习方式">
+          <div>
+            <span>学习节奏</span>
+            <strong>每日 20 分钟</strong>
+            <p>一段文本、一条注释、一个问题，把阅读变成稳定的生命练习。</p>
+          </div>
+          <div>
+            <span>课程结构</span>
+            <strong>文本 · 历史 · 象征 · 实践</strong>
+            <p>每一级都包含讲义、原文线索、导读音频、书写题和结课作品。</p>
+          </div>
+          <div>
+            <span>完成方式</span>
+            <strong>读懂一首，带走一法</strong>
+            <p>不以知识堆积为目标，而是形成可复用的读诗、观心与带领能力。</p>
+          </div>
+        </div>
         <div class="path-timeline">
-          <article>
+          <button class="active" data-academy-level="1" type="button">
             <span>Level 1</span>
             <h3>认识鲁米</h3>
             <p>20 课，建立人物、时代、文本与关键词地图。</p>
-          </article>
-          <article>
+          </button>
+          <button data-academy-level="2" type="button">
             <span>Level 2</span>
             <h3>苏菲诗歌</h3>
             <p>40 课，进入象征体系与读诗方法。</p>
-          </article>
-          <article>
+          </button>
+          <button data-academy-level="3" type="button">
             <span>Level 3</span>
             <h3>玛斯纳维精读</h3>
             <p>100 课，从故事、寓言、神学与修行层面阅读。</p>
-          </article>
-          <article>
+          </button>
+          <button data-academy-level="4" type="button">
             <span>Level 4</span>
             <h3>鲁米思想研究</h3>
             <p>论文、历史、哲学、比较宗教与文本考证。</p>
-          </article>
-          <article>
+          </button>
+          <button data-academy-level="5" type="button">
             <span>Level 5</span>
             <h3>带领读诗</h3>
             <p>组织读诗会、分享会、生命书写与探索小组。</p>
-          </article>
+          </button>
         </div>
+        <article class="academy-detail" id="academyDetail" aria-live="polite"></article>
       </section>
 
       <section id="practice" class="section practice-section" aria-labelledby="practice-title">
