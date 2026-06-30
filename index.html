@@ -23,6 +23,7 @@
         <span>鲁米研修</span>
       </a>
       <nav>
+        <a href="#journey">学习总览</a>
         <a href="#poem">今日一诗</a>
         <a href="#path">学习路径</a>
         <a href="#world">鲁米世界</a>
@@ -78,6 +79,50 @@
         </div>
       </section>
 
+      <section id="journey" class="section journey-section" aria-labelledby="journey-title">
+        <div class="section-heading">
+          <p class="kicker">Learning Journey</p>
+          <h2 id="journey-title">今天怎样进入鲁米？</h2>
+          <p>把网站从内容目录变成一条学习动线：先读一首诗，再理解背景，最后进入修习。</p>
+        </div>
+        <div class="journey-layout">
+          <article class="journey-panel">
+            <p class="eyebrow">今日学习闭环</p>
+            <div class="journey-steps" aria-label="今日学习步骤">
+              <label>
+                <input type="checkbox" data-progress-step="poem" />
+                <span>读一首诗</span>
+                <small>切换译本，先感受语言，再看导读。</small>
+              </label>
+              <label>
+                <input type="checkbox" data-progress-step="keyword" />
+                <span>抓一个关键词</span>
+                <small>从 Love、Heart、Mirror 等词进入主题。</small>
+              </label>
+              <label>
+                <input type="checkbox" data-progress-step="context" />
+                <span>补一段背景</span>
+                <small>理解人物、苏菲象征或文本出处。</small>
+              </label>
+              <label>
+                <input type="checkbox" data-progress-step="practice" />
+                <span>写一个回答</span>
+                <small>把诗带回今天的关系、选择与恐惧。</small>
+              </label>
+            </div>
+          </article>
+          <aside class="progress-panel" aria-label="今日学习进度">
+            <p class="eyebrow">今日进度</p>
+            <strong id="progressCount">0 / 4</strong>
+            <div class="progress-track" aria-hidden="true">
+              <span id="progressBar"></span>
+            </div>
+            <p id="progressHint">从“今日一诗”开始，完成一个小闭环即可。</p>
+            <a href="#poem">进入今日一诗</a>
+          </aside>
+        </div>
+      </section>
+
       <section id="poem" class="section poem-section" aria-labelledby="poem-title">
         <div class="section-heading">
           <p class="kicker">Daily Poem</p>
@@ -120,14 +165,14 @@
               光不是从外面安慰你，而是在裂缝中显出：你并不只是你的恐惧，也不只是你的损失。
             </p>
             <div class="keyword-list" aria-label="关键词">
-              <a href="#themes">Love</a>
-              <a href="#themes">Longing</a>
-              <a href="#themes">Ego</a>
-              <a href="#themes">Silence</a>
-              <a href="#themes">Beloved</a>
-              <a href="#themes">Heart</a>
-              <a href="#themes">Mirror</a>
-              <a href="#themes">Soul</a>
+              <a href="#themes" data-theme-link="爱">Love</a>
+              <a href="#themes" data-theme-link="寻找">Longing</a>
+              <a href="#themes" data-theme-link="分离">Ego</a>
+              <a href="#themes" data-theme-link="心">Silence</a>
+              <a href="#themes" data-theme-link="爱">Beloved</a>
+              <a href="#themes" data-theme-link="心">Heart</a>
+              <a href="#themes" data-theme-link="镜子">Mirror</a>
+              <a href="#themes" data-theme-link="回家">Soul</a>
             </div>
           </aside>
         </div>
@@ -140,37 +185,38 @@
           <p>不是人物简介，而是可持续扩展的知识体系。</p>
         </div>
         <div class="knowledge-grid">
-          <article>
+          <button class="active" data-world-topic="rumi" type="button">
             <span>01</span>
             <h3>鲁米是谁？</h3>
             <p>一生时间线、家族、老师、学生、弟子、流派与影响。</p>
-          </article>
-          <article>
+          </button>
+          <button data-world-topic="shams" type="button">
             <span>02</span>
             <h3>沙姆士是谁？</h3>
             <p>相遇、转变、消失与学术观点，解释鲁米生命中的断裂点。</p>
-          </article>
-          <article>
+          </button>
+          <button data-world-topic="mevlevi" type="button">
             <span>03</span>
             <h3>梅夫拉维教团</h3>
             <p>旋转舞、音乐、仪式、服装，以及每个动作的象征意义。</p>
-          </article>
-          <article>
+          </button>
+          <button data-world-topic="sufi" type="button">
             <span>04</span>
             <h3>苏菲主义</h3>
             <p>Dhikr、Fana、Baqa、Tawhid、Love、Heart 等核心概念。</p>
-          </article>
-          <article>
+          </button>
+          <button data-world-topic="islam" type="button">
             <span>05</span>
             <h3>伊斯兰背景</h3>
             <p>Quran、Hadith、Sharia、Tariqa、Haqiqa、Marifa 的关系。</p>
-          </article>
-          <article>
+          </button>
+          <button data-world-topic="misread" type="button">
             <span>06</span>
             <h3>误读索引</h3>
             <p>区分原文、译文、转述和现代再创作，减少浪漫化误读。</p>
-          </article>
+          </button>
         </div>
+        <article class="world-detail" id="worldDetail" aria-live="polite"></article>
       </section>
 
       <section id="themes" class="section" aria-labelledby="themes-title">

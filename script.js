@@ -96,6 +96,81 @@ const places = {
   科尼亚: "科尼亚是鲁米成熟、教学、写作与梅夫拉维传统形成的核心地点。"
 };
 
+const worldTopics = {
+  rumi: {
+    label: "01",
+    title: "鲁米是谁？",
+    summary: "从历史人物进入，而不是从流行语录进入。鲁米首先是十三世纪伊斯兰世界的学者、教师和诗人，后来因为沙姆士的出现而发生生命转向。",
+    points: [
+      "1207 年出生于巴尔赫文化圈，后随家族迁徙。",
+      "在科尼亚成为宗教学者、讲师与公共人物。",
+      "与沙姆士相遇后，教学、写作和生命表达方式发生剧烈变化。",
+      "其影响经由《玛斯纳维》《迪万》和梅夫拉维传统持续扩展。"
+    ],
+    next: "下一步：读 Level 1 的人物时间线，并在地图中点击巴尔赫与科尼亚。"
+  },
+  shams: {
+    label: "02",
+    title: "沙姆士是谁？",
+    summary: "沙姆士不是鲁米传记里的配角，而是让鲁米从稳定学者身份进入燃烧状态的关键人物。",
+    points: [
+      "他常被理解为鲁米的灵性导师、朋友与镜子。",
+      "相遇改变鲁米对知识、爱、沉默和神圣经验的理解。",
+      "沙姆士的消失有多种叙述，需要区分传说、教团记忆与学术研究。",
+      "理解沙姆士，才能理解鲁米诗歌里的 Friend 与 Beloved。"
+    ],
+    next: "下一步：进入主题“爱”与“分离”，观察相遇和失去如何共同塑造诗。"
+  },
+  mevlevi: {
+    label: "03",
+    title: "梅夫拉维教团",
+    summary: "旋转不是表演性的异国景观，而是一套身体、音乐、服装与宇宙象征交织的仪式传统。",
+    points: [
+      "旋转舞与鲁米之后的教团传统密切相关。",
+      "服装、动作、音乐和队形都承载象征意义。",
+      "仪式把诗歌、身体、节奏和记忆连接起来。",
+      "学习时要区分历史传统、旅游展示与现代舞台化表达。"
+    ],
+    next: "下一步：在苏菲诗歌课程中学习诵读、沉默与身体经验。"
+  },
+  sufi: {
+    label: "04",
+    title: "苏菲主义",
+    summary: "苏菲主义提供了鲁米诗歌的思想土壤。没有这些概念，酒、火、恋人、朋友、心都容易被读浅。",
+    points: [
+      "Dhikr 指向记念与反复唤回，而不只是念诵形式。",
+      "Fana 与 Baqa 涉及自我消融和在神圣中存留。",
+      "Tawhid 不只是教义命题，也影响鲁米关于合一的诗性表达。",
+      "Heart 在这里不是情绪容器，而是感知真实的中心。"
+    ],
+    next: "下一步：进入五层解析，先从象征层学习 Love、Heart、Wine。"
+  },
+  islam: {
+    label: "05",
+    title: "伊斯兰背景",
+    summary: "中文读者进入鲁米，需要理解 Quran、Hadith、Sharia、Tariqa、Haqiqa、Marifa 之间的基本关系。",
+    points: [
+      "Quran 与 Hadith 构成重要文本背景。",
+      "Sharia、Tariqa、Haqiqa、Marifa 可作为由外到内的理解线索。",
+      "鲁米诗歌常在宗教语境中表达普遍生命经验。",
+      "理解背景不是设限，而是避免把诗从其传统中抽空。"
+    ],
+    next: "下一步：在鲁米思想研究中学习文本出处、概念边界和比较方法。"
+  },
+  misread: {
+    label: "06",
+    title: "误读索引",
+    summary: "很多中文互联网上的鲁米句子其实是英文改写、现代转述或无法核查的归名语录。",
+    points: [
+      "先问：这句话是否有波斯文、章节或可靠译本出处？",
+      "再问：它是直译、意译、改写，还是二次创作？",
+      "Barks 等现代英文版本有传播价值，也需要标注其再创作性质。",
+      "平台应把美感、出处和误译说明同时呈现。"
+    ],
+    next: "下一步：进入语录知识图谱，查看出处、上下文和延伸诗歌。"
+  }
+};
+
 const academyLevels = {
   1: {
     label: "Level 1",
@@ -373,8 +448,14 @@ const poemText = document.querySelector("#poemText");
 const versionButtons = document.querySelectorAll("[data-version]");
 const themeButtons = document.querySelectorAll("[data-theme]");
 const academyButtons = document.querySelectorAll("[data-academy-level]");
+const worldButtons = document.querySelectorAll("[data-world-topic]");
+const progressChecks = document.querySelectorAll("[data-progress-step]");
 const themeDetail = document.querySelector("#themeDetail");
 const academyDetail = document.querySelector("#academyDetail");
+const worldDetail = document.querySelector("#worldDetail");
+const progressCount = document.querySelector("#progressCount");
+const progressBar = document.querySelector("#progressBar");
+const progressHint = document.querySelector("#progressHint");
 const reflectionInput = document.querySelector("#reflectionInput");
 const saveButton = document.querySelector("#saveReflection");
 const saveStatus = document.querySelector("#saveStatus");
@@ -410,6 +491,30 @@ function setTheme(theme) {
   `;
   themeButtons.forEach((button) => {
     button.classList.toggle("active", button.dataset.theme === theme);
+  });
+}
+
+function setWorldTopic(topic) {
+  const selected = worldTopics[topic];
+  worldDetail.innerHTML = `
+    <div>
+      <p class="eyebrow">Topic ${selected.label}</p>
+      <h3>${selected.title}</h3>
+      <p>${selected.summary}</p>
+    </div>
+    <div>
+      <p class="eyebrow">学习要点</p>
+      <ul>
+        ${selected.points.map((point) => `<li>${point}</li>`).join("")}
+      </ul>
+    </div>
+    <aside>
+      <p class="eyebrow">继续学习</p>
+      <p><strong>${selected.next}</strong></p>
+    </aside>
+  `;
+  worldButtons.forEach((button) => {
+    button.classList.toggle("active", button.dataset.worldTopic === topic);
   });
 }
 
@@ -513,6 +618,37 @@ academyButtons.forEach((button) => {
   button.addEventListener("click", () => setAcademyLevel(button.dataset.academyLevel));
 });
 
+worldButtons.forEach((button) => {
+  button.addEventListener("click", () => setWorldTopic(button.dataset.worldTopic));
+});
+
+document.querySelectorAll("[data-theme-link]").forEach((link) => {
+  link.addEventListener("click", () => {
+    setTheme(link.dataset.themeLink);
+  });
+});
+
+function updateProgress() {
+  const completed = Array.from(progressChecks).filter((checkbox) => checkbox.checked).length;
+  const total = progressChecks.length;
+  progressCount.textContent = `${completed} / ${total}`;
+  progressBar.style.width = `${(completed / total) * 100}%`;
+  progressHint.textContent = completed === total
+    ? "今天的学习闭环已完成。可以回到修习记录，七天后再看答案。"
+    : "从“今日一诗”开始，完成一个小闭环即可。";
+  const saved = Array.from(progressChecks).reduce((result, checkbox) => {
+    result[checkbox.dataset.progressStep] = checkbox.checked;
+    return result;
+  }, {});
+  localStorage.setItem("rumi-progress", JSON.stringify(saved));
+}
+
+const savedProgress = JSON.parse(localStorage.getItem("rumi-progress") || "{}");
+progressChecks.forEach((checkbox) => {
+  checkbox.checked = Boolean(savedProgress[checkbox.dataset.progressStep]);
+  checkbox.addEventListener("change", updateProgress);
+});
+
 document.querySelectorAll("[data-audio]").forEach((button) => {
   button.addEventListener("click", () => {
     button.textContent = `${button.dataset.audio} · 原型`;
@@ -543,4 +679,6 @@ saveButton.addEventListener("click", () => {
 
 setPoemVersion("chinese");
 setTheme("爱");
+setWorldTopic("rumi");
 setAcademyLevel("1");
+updateProgress();
